@@ -362,3 +362,47 @@ textarea[aria-invalid='true']:focus {
     transition: none !important;
   }
 }
+
+/* ===== Dark mode (follows the operating system setting) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f1f5f9;
+    --color-text-muted: #94a3b8;
+    --color-border: #334155;
+    --color-border-strong: #475569;
+
+    --color-accent-soft: #14532d;
+    --color-accent-text: #86efac;
+
+    --color-danger: #f87171;
+    --color-danger-soft: #450a0a;
+    --color-danger-border: #7f1d1d;
+    --color-success-soft: #052e16;
+    --color-success-border: #166534;
+  }
+
+  a {
+    color: #4ade80;
+  }
+
+  a:hover {
+    color: var(--color-accent-text);
+  }
+
+  /* habits.css loads after this file, so this selector needs to be more specific. */
+  .app-shell .app-header {
+    background: rgba(15, 23, 42, 0.92);
+  }
+
+  .alert-error {
+    color: #fecaca;
+  }
+
+  .alert-close:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
