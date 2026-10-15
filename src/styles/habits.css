@@ -378,8 +378,8 @@
   margin-bottom: var(--space-4);
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-pill);
-  background: var(--color-accent-soft);
-  color: var(--color-accent-text);
+  background: var(--color-streak-bg);
+  color: var(--color-streak-text);
   font-size: 14px;
   font-weight: 600;
 }
