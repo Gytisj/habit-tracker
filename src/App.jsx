@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import HabitDetailPage from './pages/HabitDetailPage';
+import StatsPage from './pages/StatsPage';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
               </PublicRoute>
             }
           />
+          <Route path="/stats" element={<StatsPage />} />
           <Route
             path="/register"
             element={
