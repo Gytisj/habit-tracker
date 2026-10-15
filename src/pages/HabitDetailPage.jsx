@@ -6,6 +6,7 @@ import { getHabit, getLogsInRange } from '../services/habits';
 import {
   formatFullDate,
   formatShortDate,
+  getCurrentStreak,
   getLastDays,
   getTodayString,
   parseDateString,
@@ -78,6 +79,7 @@ export default function HabitDetailPage() {
 
   const today = getTodayString();
   const completedCount = days.filter((day) => completedDates.has(day)).length;
+  const streak = getCurrentStreak(completedDates);
   // Empty cells so the first day lines up under the right weekday column.
   const leadingBlanks = days.length > 0 ? parseDateString(days[0]).getDay() : 0;
 
@@ -122,6 +124,10 @@ export default function HabitDetailPage() {
           <>
             <h1 className="page-title detail-title">{habit.name}</h1>
             {habit.description && <p className="detail-description">{habit.description}</p>}
+
+            <p className="streak-badge">
+              {streak > 0 ? `🔥 ${streak}-day streak` : 'No streak yet — check it off today!'}
+            </p>
 
             <section className="card history-card" aria-labelledby="history-heading">
               <div className="history-header">

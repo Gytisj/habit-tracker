@@ -371,3 +371,15 @@
     padding: var(--space-4);
   }
 }
+
+/* ===== Streak ===== */
+.streak-badge {
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+  font-size: 14px;
+  font-weight: 600;
+}
