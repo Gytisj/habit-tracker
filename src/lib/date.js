@@ -31,6 +31,23 @@ export function getLastDays(count) {
   return days;
 }
 
+// How many days in a row the habit was completed, counting back from today.
+// If today isn't checked off yet, the streak is still alive and counts from yesterday.
+export function getCurrentStreak(completedDates) {
+  const now = new Date();
+  let offset = completedDates.has(getTodayString()) ? 0 : 1;
+  let streak = 0;
+  while (
+    completedDates.has(
+      toDateString(new Date(now.getFullYear(), now.getMonth(), now.getDate() - offset))
+    )
+  ) {
+    streak++;
+    offset++;
+  }
+  return streak;
+}
+
 // "October 12"
 export function formatMonthDay(date) {
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });

@@ -18,6 +18,8 @@
   --color-success-soft: #f0fdf4;
   --color-success-border: #bbf7d0;
   --color-danger-text: #991b1b;
+  --color-streak-bg: #ffedd5;
+  --color-streak-text: #9a3412;
 
   --color-link: var(--color-accent-hover);
   --color-header-bg: rgba(255, 255, 255, 0.92);
@@ -391,6 +393,8 @@ textarea[aria-invalid='true']:focus {
     --color-success-soft: #052e16;
     --color-success-border: #166534;
     --color-danger-text: #fecaca;
+    --color-streak-bg: #431407;
+    --color-streak-text: #fdba74;
 
     --color-link: #4ade80;
     --color-header-bg: rgba(15, 23, 42, 0.92);
