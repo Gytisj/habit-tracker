@@ -157,7 +157,7 @@ export default function DashboardPage() {
             onClick={handleSignOut}
             disabled={signingOut}
           >
-            {signingOut ? 'Logging out…' : 'Logout'}
+            {signingOut ? 'Logging out…' : 'Log out'}
           </button>
         </div>
       </header>
